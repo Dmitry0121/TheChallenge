@@ -1,0 +1,38 @@
+{
+  "name": "challenge",
+  "version": "1.0.0",
+  "description": "The challenge",
+  "private": true,
+  "scripts": {
+    "build": "nwb build-react-app",
+    "clean": "nwb clean-app",
+    "start": "nwb serve-react-app",
+    "test": "nwb test"
+  },
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
+    "reselect": "^3.0.1"
+  },
+  "devDependencies": {
+    "nwb": "0.12.x",
+    "react-test-renderer": "^16.13.1",
+    "jest-fetch-mock": "^3.0.3"
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": "",
+  "jest": {
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/src/__tests__/__mocks__/styleMock.js"
+    },
+    "automock": false,
+    "setupFiles": [
+      "<rootDir>/src/__tests__/__mocks__/fetchMock.js"
+    ]
+  }
+}
